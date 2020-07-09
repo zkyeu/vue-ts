@@ -1,0 +1,58 @@
+{
+  "postoptions": {
+    "errNo": 0,
+    "errStr": "success",
+    "data": {
+      "inputList": [
+        {
+          "key": "projectid",
+          "name": "项目ID"
+        }
+      ],
+      "selectList": [
+        {
+          "key": "source",
+          "name": "项目来源",
+          "options": [
+            {
+              "key": "cc-1",
+              "name": "1-1"
+            },
+            {
+              "key": "cc-2",
+              "name": "1-2"
+            }
+          ]
+        },
+        {
+          "key": "type",
+          "name": "项目类型",
+          "options": [
+            {
+              "key": "cc-1",
+              "name": "1-1"
+            },
+            {
+              "key": "cc-2",
+              "name": "1-2"
+            }
+          ]
+        },
+        {
+          "key": "status",
+          "name": "项目状态",
+          "options": [
+            {
+              "key": "cc-1",
+              "name": "1-1"
+            },
+            {
+              "key": "cc-2",
+              "name": "1-2"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

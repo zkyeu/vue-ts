@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-06-19 16:45:12
- * @LastEditTime: 2020-06-20 01:29:50
+ * @LastEditTime: 2020-06-22 17:03:24
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-ts/.eslintrc.js
@@ -16,7 +16,7 @@ module.exports = {
 		'eslint:recommended',
 		'@vue/typescript/recommended',
 		'@vue/prettier',
-		'@vue/prettier/@typescript-eslint',
+		'@vue/prettier/@typescript-eslint'
 	],
 	parserOptions: {
 		ecmaVersion: 2020,
