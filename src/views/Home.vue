@@ -1,27 +1,30 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-19 16:45:12
- * @LastEditTime: 2020-06-20 01:34:06
+ * @LastEditTime: 2020-07-10 11:07:45
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-ts/src/views/Home.vue
 -->
 <template>
-  <div>
-    <Left />
-    <Right />
-  </div>
+  <section class="main-layer">
+    <Main />
+  </section>
 </template>
 
 <script>
-import Left from './layout/left';
-import Right from './layout/right';
+import Main from './layout/main';
 
 export default {
-  name: "Home",
+  name: 'Home',
   components: {
-    Left,
-    Right
+    Main
   }
 };
 </script>
+
+<style lang="less">
+.main-layer {
+  background: rgba(243, 244, 247, 1);
+}
+</style>
