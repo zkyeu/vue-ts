@@ -1,23 +1,21 @@
 /*
- * @Author: your name
- * @Date: 2020-06-19 16:45:12
- * @LastEditTime: 2020-06-22 17:33:20
- * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
- * @FilePath: /vue-ts/src/store/index.ts
- */ 
-import Vue from "vue";
-import Vuex from "vuex";
-// import actions from './actions';
-// import mutations from './mutations';
-// import state from './state';
-// import getters from './getters';
+ * @Author: your name
+ * @Date: 2019-10-14 23:42:07
+ * @LastEditTime: 2020-07-10 23:14:02
+ * @LastEditors: Please set LastEditors
+ */
+
+import Vue from 'vue';
+import Vuex from 'vuex';
+
+import * as mutations from './mutations';
+import state from './state';
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
-  state: {},
-  mutations: {},
-  actions: {},
-  modules: {}
+const store = new Vuex.Store({
+  state,
+  mutations
 });
+export default store;
