@@ -1,37 +1,38 @@
 /*
  * @Author: your name
  * @Date: 2020-06-19 16:45:12
- * @LastEditTime: 2020-06-20 01:18:45
- * @LastEditors: your name
+ * @LastEditTime: 2020-07-11 17:20:17
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-ts/src/router/index.ts
- */ 
-import Vue from "vue";
-import VueRouter, { RouteConfig } from "vue-router";
-import Home from "../views/Home.vue";
+ */
+
+import Vue from 'vue';
+import VueRouter, { RouteConfig } from 'vue-router';
+import Home from '../views/Home.vue';
 
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
-    path: "/",
-    name: "Home",
+    path: '/',
+    name: 'Home',
     component: Home
   }
   // ,
   // {
-  //   path: "/about",
-  //   name: "About",
+  //   path: '/about',
+  //   name: 'About',
   //   // route level code-splitting
   //   // this generates a separate chunk (about.[hash].js) for this route
   //   // which is lazy-loaded when the route is visited.
   //   component: () =>
-  //     import(/* webpackChunkName: "about" */ "../views/About.vue")
+  //     import(/* webpackChunkName: 'about' */ '../views/About.vue')
   // }
 ];
 
 const router = new VueRouter({
-  mode: "history",
+  mode: 'history',
   base: process.env.BASE_URL,
   routes
 });
