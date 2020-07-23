@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-20 01:07:19
- * @LastEditTime: 2020-07-23 07:55:57
+ * @LastEditTime: 2020-07-23 14:18:33
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-ts/src/views/layout/left.vue
@@ -14,7 +14,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import Menu from '@/components/menu.vue';
+import Menu from '@/components/global/menu.vue';
 // import Http from '@/api/api-axios';
 
 @Component({

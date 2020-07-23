@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-06-19 16:45:12
- * @LastEditTime: 2020-07-23 09:55:32
+ * @LastEditTime: 2020-07-23 14:18:12
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-ts/src/router/index.ts
@@ -36,6 +36,11 @@ const routes: Array<RouteConfig> = [
         component: () => import('../views/index/other.vue')
       }
     ]
+  },
+  {
+    path: '*',
+    name: '404',
+    component: () => import('../components/global/404.vue')
   }
   // ,
   // {
