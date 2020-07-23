@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-20 01:07:19
- * @LastEditTime: 2020-07-23 11:30:02
+ * @LastEditTime: 2020-07-23 14:23:05
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-ts/src/views/layout/left.vue
@@ -28,13 +28,13 @@ export default class Head extends Vue {
   @Prop() private msg!: string;
 
   fetchData() {
-    Http.usereditoptions().then(res => {
+    Http.userinfo().then(res => {
       console.log(res);
     });
   }
 
   mounted() {
-    this.fetchData();
+    // this.fetchData();
   }
 }
 </script>
