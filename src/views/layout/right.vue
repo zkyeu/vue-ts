@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-20 01:07:38
- * @LastEditTime: 2020-07-09 20:52:37
+ * @LastEditTime: 2020-07-23 07:59:39
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-ts/src/views/layout/right.vue
@@ -9,7 +9,7 @@
 
 <template>
   <div class="layer-right">
-    right
+    right content
   </div>
 </template>
 
@@ -23,7 +23,9 @@ export default class Right extends Vue {
 </script>
 
 <style scoped lang="less">
-.aa {
-  display: inline;
+.layer-right {
+  flex: 1;
+  background: #eee;
+  padding: 16px;
 }
 </style>

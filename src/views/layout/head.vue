@@ -1,14 +1,20 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-20 01:07:19
- * @LastEditTime: 2020-07-09 21:16:58
+ * @LastEditTime: 2020-07-21 19:46:03
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-ts/src/views/layout/left.vue
 -->
 <template>
-  <div class="layer-head">
-    head
+  <div class="header">
+    <div class="logo">
+      <a href="/"><img src="../../assets/imgs/logo.png"/></a>
+    </div>
+    <div class="user-Center">
+      <!-- <svgicon name="bell" /> -->
+      <svgicon name="user" />
+    </div>
   </div>
 </template>
 
@@ -34,9 +40,30 @@ export default class Head extends Vue {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-.layer-head {
+.header {
   display: flex;
-  height: 56px;
-  background: #ff0;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0 24px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+
+  .logo {
+    padding-top: 11px;
+    img {
+      width: auto;
+      height: 28px;
+    }
+  }
+
+  .user-Center {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    svg {
+      width: 30px;
+      height: 30px;
+      color: #ddd;
+    }
+  }
 }
 </style>
