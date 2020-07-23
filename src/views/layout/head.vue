@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-20 01:07:19
- * @LastEditTime: 2020-07-21 19:46:03
+ * @LastEditTime: 2020-07-23 08:21:49
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-ts/src/views/layout/left.vue
@@ -9,7 +9,8 @@
 <template>
   <div class="header">
     <div class="logo">
-      <a href="/"><img src="../../assets/imgs/logo.png"/></a>
+      <!-- <a href="/"><img src="../../assets/imgs/logo.png"/></a> -->
+      LOGO
     </div>
     <div class="user-Center">
       <!-- <svgicon name="bell" /> -->
@@ -49,6 +50,8 @@ export default class Head extends Vue {
 
   .logo {
     padding-top: 11px;
+    font-size: 30px;
+    font-weight: 500;
     img {
       width: auto;
       height: 28px;

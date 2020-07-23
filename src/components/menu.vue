@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-21 19:46:52
- * @LastEditTime: 2020-07-23 07:51:14
+ * @LastEditTime: 2020-07-23 10:57:52
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-ts/src/components/menu.vue
@@ -9,11 +9,11 @@
 
 <template>
   <nav class="menu">
-    <el-menu default-active="2" @open="handleOpen" @close="handleClose">
+    <el-menu router :default-active="$route.path">
       <el-menu-item
-        v-for="(item, index) in menuList"
-        :key="index"
-        :index="item.id.toString()"
+        v-for="item in menuList"
+        :key="item.path"
+        :index="item.path"
       >
         <i :class="item.icon"></i>
         <span slot="title">{{ item.lable }}</span>
@@ -23,62 +23,54 @@
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { Component, Vue } from 'vue-property-decorator';
 
 @Component
 export default class HelloWorld extends Vue {
   menuList = [
     {
       id: 1,
-      lable: '导航菜单一',
+      lable: '默认页面',
       icon: 'el-icon-location',
-      path: ''
+      path: '/index'
     },
     {
       id: 2,
-      lable: '导航菜单2',
+      lable: '其他页面',
       icon: 'el-icon-menu',
-      path: ''
+      path: '/other'
     },
     {
       id: 3,
-      lable: '导航菜单3',
+      lable: '另外一个页',
       icon: 'el-icon-document',
-      path: ''
+      path: '/another'
     },
     {
       id: 4,
       lable: '导航菜单4',
       icon: 'el-icon-setting',
-      path: ''
+      path: '/a'
     },
     {
       id: 5,
       lable: '导航菜单5',
       icon: 'el-icon-s-promotion',
-      path: ''
+      path: '/b'
     },
     {
       id: 6,
       lable: '导航菜单6',
       icon: 'el-icon-date',
-      path: ''
+      path: '/c'
     },
     {
       id: 7,
       lable: '导航菜单7',
       icon: 'el-icon-takeaway-box',
-      path: ''
+      path: '/d'
     }
   ];
-  @Prop() private msg!: string;
-
-  handleOpen(key, keyPath) {
-    console.log(key, keyPath);
-  }
-  handleClose(key, keyPath) {
-    console.log(key, keyPath);
-  }
 }
 </script>
 
