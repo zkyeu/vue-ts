@@ -1,14 +1,14 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-23 08:46:46
- * @LastEditTime: 2020-07-23 10:58:34
+ * @LastEditTime: 2020-07-23 14:02:57
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-ts/src/views/index/another.vue
 -->
 
 <template>
-  <section class="index">
+  <section class="another">
     {{ str }}
   </section>
 </template>
@@ -23,7 +23,7 @@ export default class Another extends Vue {
 </script>
 
 <style lang="less">
-.index {
+.another {
   font-size: 18px;
   color: rgb(9, 68, 29);
 }
