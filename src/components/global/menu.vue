@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-21 19:46:52
- * @LastEditTime: 2020-07-23 14:02:13
+ * @LastEditTime: 2020-07-23 14:30:08
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-ts/src/components/menu.vue
@@ -34,81 +34,19 @@
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
-
+import Http from '@/api/api-axios';
 @Component
 export default class HelloWorld extends Vue {
-  menuList = [
-    {
-      id: 1,
-      lable: '默认页面',
-      icon: 'el-icon-location',
-      path: '/index'
-    },
-    {
-      id: 2,
-      lable: '其他页面',
-      icon: 'el-icon-menu',
-      path: '/other'
-    },
-    {
-      id: 3,
-      lable: '另外一个页',
-      icon: 'el-icon-document',
-      path: '/another'
-    },
-    {
-      id: 4,
-      lable: '二级菜单',
-      icon: 'el-icon-setting',
-      path: '/a',
-      children: [
-        {
-          id: 2,
-          lable: '其他页面',
-          icon: 'el-icon-menu',
-          path: '/other'
-        },
-        {
-          id: 3,
-          lable: '另外一个页',
-          icon: 'el-icon-document',
-          path: '/another'
-        }
-      ]
-    },
-    {
-      id: 5,
-      lable: '导航菜单5',
-      icon: 'el-icon-s-promotion',
-      path: '/b'
-    },
-    {
-      id: 6,
-      lable: '导航菜单6',
-      icon: 'el-icon-date',
-      path: '/c',
-      children: [
-        {
-          id: 2,
-          lable: '其他页面',
-          icon: 'el-icon-menu',
-          path: '/other'
-        },
-        {
-          id: 3,
-          lable: '另外一个页',
-          icon: 'el-icon-document',
-          path: '/another'
-        }
-      ]
-    },
-    {
-      id: 7,
-      lable: '导航菜单7',
-      icon: 'el-icon-takeaway-box',
-      path: '/d'
-    }
-  ];
+  menuList = [];
+
+  fetchMenu() {
+    Http.userinfo().then(res => {
+      this.menuList = res.data.menu;
+    });
+  }
+  created() {
+    this.fetchMenu();
+  }
 }
 </script>
 
@@ -121,6 +59,7 @@ export default class HelloWorld extends Vue {
       display: block;
       margin: 3px 16px;
     }
+
     .el-menu-item,
     .el-submenu__title {
       height: 50px;

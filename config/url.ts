@@ -10,7 +10,7 @@
 const url = {
   get: {
     getlist: 'getlist',
-    usereditoptions: '/userinfo'
+    userinfo: '/userinfo'
   },
   post: {
     postoptions: 'postoptions'
