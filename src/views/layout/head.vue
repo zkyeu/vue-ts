@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-20 01:07:19
- * @LastEditTime: 2020-07-23 14:23:05
+ * @LastEditTime: 2020-08-10 15:27:17
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-ts/src/views/layout/left.vue
@@ -21,7 +21,7 @@
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator';
-import Http from '@/api/api-axios';
+import Http from '@/http/api-axios';
 
 @Component
 export default class Head extends Vue {
