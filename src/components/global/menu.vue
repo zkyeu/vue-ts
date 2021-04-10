@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-07-21 19:46:52
- * @LastEditTime: 2020-11-04 10:01:30
+ * @LastEditTime: 2021-03-16 18:55:40
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-ts/src/components/menu.vue
@@ -28,7 +28,7 @@
           <el-menu-item
             v-for="sub in item.children"
             :key="sub.id"
-            :index="item.path"
+            :index="sub.path"
             >{{ sub.label }}</el-menu-item
           >
         </el-submenu>
@@ -44,17 +44,23 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import Http from '@/http/api-axios';
-import HD from './handleData';
-@Component
+import menu from '../../../mock/data/menu.js';
+@Component({})
 export default class Menu extends Vue {
   menuList = [] as unknown;
 
   fetchMenu() {
     Http.userinfo().then(() => {
       // this.menuList = res.data.menulist;
-      this.menuList = HD.MenuData();
+      this.menuList = menu;
     });
   }
+
+  goto(v: string) {
+    console.log(v);
+    this.$router.push(v);
+  }
+
   created() {
     this.fetchMenu();
   }

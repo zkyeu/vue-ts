@@ -7,7 +7,7 @@
  * @FilePath: /vue-ts/src/components/global/handleData.js
  */
 /* jshint esversion: 9 */
-import menu from '../../../mock/data/menu.json';
+import menu from '../../../mock/data/menu';
 function MenuData() {
   return menu;
 }

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-20 01:07:19
- * @LastEditTime: 2020-11-03 13:52:13
+ * @LastEditTime: 2020-11-05 14:46:38
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-ts/src/views/layout/left.vue
@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
+import { Component, Vue, Watch } from 'vue-property-decorator';
 import Menu from '@/components/global/menu.vue';
 
 @Component({

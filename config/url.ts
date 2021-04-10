@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-06-23 09:22:35
- * @LastEditTime: 2020-11-03 12:58:11
+ * @LastEditTime: 2021-03-17 22:58:49
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /vue-ts/config/url.ts
@@ -14,7 +14,8 @@ const url = {
     getquestionsourceList: '/bcproduceowapi/bctaskapi/getquestionsourceList'
   },
   post: {
-    postoptions: 'postoptions'
+    postoptions: 'postoptions',
+    imgHandle: 'http://localhost:7001/api/other/table'
   },
   file: {
     // ...
